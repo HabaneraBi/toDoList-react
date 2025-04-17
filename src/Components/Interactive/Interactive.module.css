@@ -1,0 +1,42 @@
+.interactive {
+  width: 100%;
+  height: 38px;
+  display: flex;
+  column-gap: 16px;
+}
+
+.but {
+  background-color: rgb(108, 99, 255);
+  color: white;
+  width: 38px;
+  height: 38px;
+  border: none;
+  font-weight: 700;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.select {
+  background-color: rgb(108, 99, 255);
+  color: white;
+  width: 85px;
+  height: 38px;
+  border: none;
+  font-weight: 700;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.select:focus {
+  outline: none;
+}
+
+.but:hover {
+  background-color: rgb(128, 122, 253);
+  transition: background-color 0.3s ease;
+}
+.but:active {
+  background-color: rgb(76, 67, 255);
+  transition: background-color 0s;
+}

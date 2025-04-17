@@ -1,0 +1,15 @@
+.inp {
+  border: 1px solid rgb(108, 99, 255);
+  height: 38px;
+  border-radius: 8px;
+  font-size: 18px;
+  padding-left: 10px;
+}
+
+.inp::placeholder {
+  color: #c3c1e5;
+}
+
+.inp:focus {
+  outline: none;
+}

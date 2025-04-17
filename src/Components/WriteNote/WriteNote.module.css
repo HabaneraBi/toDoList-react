@@ -1,0 +1,94 @@
+.noteDialog {
+  bottom: 400px;
+  width: 500px;
+  height: 289px;
+  border-radius: 15px;
+  border: none;
+}
+
+.noteDialog::backdrop {
+  backdrop-filter: brightness(55%);
+}
+
+.allContent {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.section1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.divButs {
+  display: flex;
+  justify-content: space-between;
+  width: 440px;
+  height: 38px;
+}
+
+.cancel {
+  font-size: 17px;
+  width: 110px;
+  background-color: white;
+  border: 1px solid rgb(108, 99, 255);
+  color: rgb(108, 99, 255);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.apply {
+  font-size: 17px;
+  width: 97px;
+  background-color: rgb(108, 99, 255);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.cancel:hover {
+  background-color: rgb(200, 198, 255);
+  transition: background-color 0.3s ease;
+}
+.apply:hover {
+  background-color: rgb(140, 136, 255);
+  transition: background-color 0.3s ease;
+}
+
+.cancel:active {
+  background-color: rgb(175, 172, 255);
+  transition: background-color 0s;
+}
+
+.apply:active {
+  background-color: rgb(78, 72, 255);
+  transition: background-color 0s;
+}
+
+.but {
+  width: 50px;
+  height: 50px;
+  border-radius: 30px;
+  border: none;
+  align-self: end;
+  margin-left: 57px;
+  font-size: 40px;
+  color: white;
+  background-color: rgb(108, 99, 255);
+  cursor: pointer;
+}
+
+.but:hover {
+  background-color: rgb(128, 122, 253);
+  transition: background-color 0.3s ease;
+}
+.but:active {
+  background-color: rgb(76, 67, 255);
+  transition: background-color 0s;
+}

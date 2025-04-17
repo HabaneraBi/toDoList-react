@@ -1,0 +1,22 @@
+.butW {
+  width: 18px;
+  height: 18px;
+  text-align: center;
+  padding: 0;
+  background-color: white;
+  border: none;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.butDiv {
+  width: 57px;
+  height: 18px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  align-self: center;
+}

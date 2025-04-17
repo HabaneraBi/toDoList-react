@@ -1,0 +1,52 @@
+.li {
+  margin-top: 20px;
+  box-sizing: content-box;
+  display: flex;
+  justify-content: space-between;
+  width: 463px;
+  height: 26px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgb(108, 99, 255);
+}
+
+.checkbox {
+  appearance: none;
+  outline: none;
+  transition: none;
+  border: 1px solid rgb(108, 99, 255);
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+}
+
+.checkbox:not(:checked):hover {
+  background-color: rgb(238, 237, 255);
+}
+
+.checkbox:checked::before {
+  content: "\2714";
+  font-size: 20px;
+  color: white;
+}
+
+.checkbox:checked {
+  width: 26px;
+  height: 26px;
+  background-color: rgb(108, 99, 255);
+}
+
+.checkbox:checked:hover {
+  background-color: rgb(131, 125, 255);
+  border: 1px solid rgb(131, 125, 255);
+}
+
+.text {
+  width: 350px;
+  height: 20px;
+  font-size: 23px;
+}
