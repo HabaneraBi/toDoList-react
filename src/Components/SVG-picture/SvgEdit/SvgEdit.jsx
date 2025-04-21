@@ -1,4 +1,4 @@
-import classes from "./Svg.module.css";
+import classes from "./SvgEdit.module.css";
 
 export default function SvgEdit() {
   return (

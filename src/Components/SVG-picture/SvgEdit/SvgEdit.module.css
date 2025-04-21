@@ -1,0 +1,13 @@
+.svg:hover .path {
+  stroke: rgb(108, 99, 255);
+  transition: stroke 0.4s ease;
+}
+
+.svg {
+  fill: white;
+}
+
+.svg:active .path {
+  stroke: rgb(83, 77, 197);
+  transition: stroke 0s;
+}

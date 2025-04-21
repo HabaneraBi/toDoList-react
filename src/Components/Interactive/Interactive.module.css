@@ -1,3 +1,7 @@
+* {
+  font-family: "Kanit", sans-serif;
+}
+
 .interactive {
   width: 100%;
   height: 38px;
@@ -6,30 +10,15 @@
 }
 
 .but {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: rgb(108, 99, 255);
-  color: white;
   width: 38px;
   height: 38px;
   border: none;
-  font-weight: 700;
   border-radius: 8px;
   cursor: pointer;
-}
-
-.select {
-  background-color: rgb(108, 99, 255);
-  color: white;
-  width: 85px;
-  height: 38px;
-  border: none;
-  font-weight: 700;
-  padding: 8px;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-.select:focus {
-  outline: none;
 }
 
 .but:hover {

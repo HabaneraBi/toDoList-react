@@ -45,8 +45,28 @@
   border: 1px solid rgb(131, 125, 255);
 }
 
-.text {
+.textSpan {
   width: 350px;
-  height: 20px;
+  height: 26px;
   font-size: 23px;
+  display: flex;
+  align-items: center;
+}
+
+.fieldEdit {
+  width: 350px;
+  height: 26px;
+  font-size: 20px;
+  border: 1px solid rgb(108, 99, 255);
+  border-radius: 7px;
+}
+
+.fieldEdit:focus {
+  outline: none;
+}
+
+.textSpanChecked {
+  color: #252525;
+  opacity: 50%;
+  text-decoration: line-through;
 }

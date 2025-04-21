@@ -1,4 +1,4 @@
-import classes from "./Svg.module.css";
+import classes from "./SvgForDel.module.css";
 
 export default function SvgForDel() {
   return (
