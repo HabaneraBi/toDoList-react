@@ -2,13 +2,12 @@ import classes from "./SectionUl.module.css";
 import SectionLi from "../SectionLi/SectionLi.jsx";
 import { ContextForSearchAndSelect } from "../../../Main/App.jsx";
 import { useContext } from "react";
+import SvgEmpty from "../../SVG-picture/SvgEmpty/SvgEmpty.jsx";
 
 export default function SectionUl({ arrLi, setArrLi }) {
   const context = useContext(ContextForSearchAndSelect);
 
   const forMap = (el) => {
-    console.log(el.isChecked + " - " + arrLi.indexOf(el));
-    console.log("-----");
     return (
       <SectionLi
         isChecked={el.isChecked}
@@ -33,15 +32,22 @@ export default function SectionUl({ arrLi, setArrLi }) {
   });
 
   return (
-    <ul className={classes.ul}>
-      {context.searchVal !== ""
-        ? groupArrLi
-            .filter(
-              (el) =>
-                context.searchVal === el.val.slice(0, context.searchVal.length)
-            )
-            .map(forMap)
-        : groupArrLi.map(forMap)}
-    </ul>
+    <>
+      {groupArrLi.length === 0 ? (
+        <SvgEmpty />
+      ) : (
+        <ul className={classes.ul}>
+          {context.searchVal !== ""
+            ? groupArrLi
+                .filter(
+                  (el) =>
+                    context.searchVal ===
+                    el.val.slice(0, context.searchVal.length)
+                )
+                .map(forMap)
+            : groupArrLi.map(forMap)}
+        </ul>
+      )}
+    </>
   );
 }

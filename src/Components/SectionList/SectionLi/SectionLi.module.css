@@ -3,8 +3,9 @@
   box-sizing: content-box;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 463px;
-  height: 26px;
+  min-height: 26px;
   padding-bottom: 20px;
   border-bottom: 1px solid rgb(108, 99, 255);
 }
@@ -47,16 +48,18 @@
 
 .textSpan {
   width: 350px;
-  height: 26px;
+  min-height: 26px;
   font-size: 23px;
   display: flex;
   align-items: center;
+  word-break: break-word;
 }
 
 .fieldEdit {
+  padding: 0;
   width: 350px;
   height: 26px;
-  font-size: 20px;
+  font-size: 23px;
   border: 1px solid rgb(108, 99, 255);
   border-radius: 7px;
 }

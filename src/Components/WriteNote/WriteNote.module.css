@@ -76,7 +76,8 @@
   height: 50px;
   border-radius: 30px;
   border: none;
-  align-self: end;
+  position: sticky;
+  top: 670px;
   margin-left: 57px;
   background-color: rgb(108, 99, 255);
   cursor: pointer;
@@ -91,6 +92,10 @@
 .but:active {
   background-color: rgb(76, 67, 255);
   transition: background-color 0s;
+}
+
+.but:focus {
+  outline: none;
 }
 
 .h1 {

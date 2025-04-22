@@ -24,6 +24,15 @@ export default function WriteNote({ inpVal, setInpVal, setArrLi }) {
     closer();
   }
 
+  function onKey(e) {
+    if (e.key === "Escape") {
+      closer();
+    } else if (e.key === "Enter") {
+      e.preventDefault();
+      transInfoForLi();
+    }
+  }
+
   return (
     <>
       <button
@@ -39,6 +48,7 @@ export default function WriteNote({ inpVal, setInpVal, setArrLi }) {
               <h1 className={classes.h1}>NEW NOTE</h1>
               <InputComponent
                 onChange={onChange}
+                onKey={onKey}
                 val={inpVal}
                 width="440px"
                 placeholder="Input your note..."

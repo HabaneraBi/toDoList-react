@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import WriteNote from "../WriteNote/WriteNote.jsx";
 import classes from "./SectionList.module.css";
 import SectionUl from "./SectionUl/SectionUl.jsx";
-import image from "../../svg-image/empty.svg";
 
 export default function SectionList() {
   const [inpVal, setInpVal] = useState("");
@@ -20,14 +19,7 @@ export default function SectionList() {
 
   return (
     <section className={classes.content}>
-      {arrLi.length === 0 ? (
-        <div className={classes.contentImage}>
-          <img className={classes.img} src={image} />
-          <p className={classes.pEmpty}>Empty...</p>
-        </div>
-      ) : (
-        <SectionUl arrLi={arrLi} setArrLi={setArrLi} />
-      )}
+      <SectionUl arrLi={arrLi} setArrLi={setArrLi} />
 
       <WriteNote setArrLi={setArrLi} inpVal={inpVal} setInpVal={setInpVal} />
     </section>
