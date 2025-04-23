@@ -68,10 +68,6 @@
   }
 }
 
-/* .fieldEdit:focus {
-  outline: none;
-} */
-
 .textSpanChecked {
   color: var(--span-color);
   opacity: 50%;
