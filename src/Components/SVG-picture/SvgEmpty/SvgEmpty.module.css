@@ -1,3 +1,4 @@
+@import "../../../themeVar.module.css";
 .contentImage {
   margin-top: 30px;
   width: 520px;
@@ -17,4 +18,5 @@
   font-family: "Kanit", sans-serif;
   margin: 0;
   font-size: 20px;
+  color: var(--li-color);
 }

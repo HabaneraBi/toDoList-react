@@ -1,16 +1,17 @@
+@import "../../themeVar.module.css";
+
 .inp {
-  border: 1px solid rgb(108, 99, 255);
+  border: 1px solid var(--input-color);
+  background-color: var(--all-color);
   height: 38px;
   border-radius: 8px;
   font-size: 20px;
   padding-left: 10px;
   color: rgb(108, 99, 255);
-}
-
-.inp::placeholder {
-  color: #c3c1e5;
-}
-
-.inp:focus {
-  outline: none;
+  &::placeholder {
+    color: var(--placeholder-color);
+  }
+  &:focus {
+    outline: none;
+  }
 }

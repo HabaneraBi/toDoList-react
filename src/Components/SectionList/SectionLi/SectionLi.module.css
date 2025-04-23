@@ -1,3 +1,4 @@
+@import "../../../themeVar.module.css";
 .li {
   margin-top: 20px;
   box-sizing: content-box;
@@ -23,16 +24,14 @@
   justify-content: center;
   align-items: center;
   border-radius: 3px;
-}
-
-.checkbox:not(:checked):hover {
-  background-color: rgb(238, 237, 255);
-}
-
-.checkbox:checked::before {
-  content: "\2714";
-  font-size: 20px;
-  color: white;
+  &:not(:checked):hover {
+    background-color: rgb(238, 237, 255);
+  }
+  &:checked::before {
+    content: "\2714";
+    font-size: 20px;
+    color: white;
+  }
 }
 
 .checkbox:checked {
@@ -53,6 +52,7 @@
   display: flex;
   align-items: center;
   word-break: break-word;
+  color: var(--li-color);
 }
 
 .fieldEdit {
@@ -62,11 +62,14 @@
   font-size: 23px;
   border: 1px solid rgb(108, 99, 255);
   border-radius: 7px;
+  &:focus {
+    outline: none;
+  }
 }
 
-.fieldEdit:focus {
+/* .fieldEdit:focus {
   outline: none;
-}
+} */
 
 .textSpanChecked {
   color: #252525;

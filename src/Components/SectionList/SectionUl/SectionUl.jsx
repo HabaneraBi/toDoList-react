@@ -34,7 +34,7 @@ export default function SectionUl({ arrLi, setArrLi }) {
   return (
     <>
       {groupArrLi.length === 0 ? (
-        <SvgEmpty />
+        <SvgEmpty theme={context.theme} />
       ) : (
         <ul className={classes.ul}>
           {context.searchVal !== ""

@@ -8,9 +8,17 @@ export { ContextForSearchAndSelect };
 export default function App() {
   const [searchVal, setSearchVal] = useState("");
   const [selectVal, setSelectVal] = useState("all");
+  const [theme, setTheme] = useState(false);
   return (
     <ContextForSearchAndSelect.Provider
-      value={{ searchVal, setSearchVal, selectVal, setSelectVal }}
+      value={{
+        searchVal,
+        setSearchVal,
+        selectVal,
+        setSelectVal,
+        theme,
+        setTheme,
+      }}
     >
       <SectionWrite />
       <SectionList />

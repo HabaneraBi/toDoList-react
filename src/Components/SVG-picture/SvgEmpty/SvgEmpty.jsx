@@ -1,10 +1,11 @@
 import classes from "./SvgEmpty.module.css";
-import image from "../../../svg-image/empty.svg";
+import imageLight from "../../../svg-image/emptyLight.svg";
+import imageDark from "../../../svg-image/emptyDark.svg";
 
-export default function SvgEmpty() {
+export default function SvgEmpty({ theme }) {
   return (
     <div className={classes.contentImage}>
-      <img className={classes.img} src={image} />
+      <img className={classes.img} src={theme ? imageDark : imageLight} />
       <p className={classes.pEmpty}>Empty...</p>
     </div>
   );
