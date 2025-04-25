@@ -4,7 +4,6 @@ import classes from "./SectionList.module.css";
 import SectionUl from "./SectionUl/SectionUl.jsx";
 
 export default function SectionList() {
-  const [inpVal, setInpVal] = useState("");
   const [arrLi, setArrLi] = useState([]);
 
   useEffect(() => {
@@ -21,7 +20,7 @@ export default function SectionList() {
     <section className={classes.content}>
       <SectionUl arrLi={arrLi} setArrLi={setArrLi} />
 
-      <WriteNote setArrLi={setArrLi} inpVal={inpVal} setInpVal={setInpVal} />
+      <WriteNote setArrLi={setArrLi} />
     </section>
   );
 }

@@ -37,8 +37,9 @@ export default function Interactive() {
   return (
     <div className={classes.interactive}>
       <InputComponent
+        parentWidth={750}
         onChange={onChangeSearch}
-        width="595px"
+        width={595}
         placeholder="Search note..."
       />
       <SelectSort onChange={onChangeSelect} selectVal={context.selectVal} />

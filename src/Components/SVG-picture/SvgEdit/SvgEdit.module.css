@@ -1,13 +1,21 @@
 @import "../../../themeVar.module.css";
 .svg {
   fill: var(--all-color);
-
-  &:hover .path {
-    stroke: rgb(108, 99, 255);
-    transition: stroke 0.4s ease;
-  }
 }
 
+.svg:hover .path {
+  stroke: rgb(108, 99, 255);
+  transition: stroke 0.4s ease;
+}
 .pathActive {
   stroke: rgb(74, 70, 145);
+}
+.path {
+  stroke: rgb(210, 210, 210);
+}
+
+@media (hover: none) {
+  .svg:hover .path {
+    stroke: rgb(210, 210, 210);
+  }
 }

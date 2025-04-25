@@ -1,11 +1,12 @@
 import InputComponent from "../InputComponent/InputComponent";
 import classes from "./WriteNote.module.css";
 import SvgCreate from "../SVG-picture/SvgCreate/SvgCreate";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { v4 as id } from "uuid";
 
-export default function WriteNote({ inpVal, setInpVal, setArrLi }) {
+export default function WriteNote({ setArrLi }) {
+  const [inpVal, setInpVal] = useState("");
   const dialog = useRef(null);
   function closer() {
     dialog.current.close();
@@ -17,6 +18,9 @@ export default function WriteNote({ inpVal, setInpVal, setArrLi }) {
   }
 
   function transInfoForLi() {
+    if (inpVal.trim() === "") {
+      return;
+    }
     setArrLi((prevArr) => [
       ...prevArr,
       { val: inpVal, isChecked: false, id: id() },
@@ -50,7 +54,8 @@ export default function WriteNote({ inpVal, setInpVal, setArrLi }) {
                 onChange={onChange}
                 onKey={onKey}
                 val={inpVal}
-                width="440px"
+                parentWidth={466}
+                width={440}
                 placeholder="Input your note..."
               />
             </div>

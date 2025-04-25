@@ -6,12 +6,13 @@ export default function InputComponent({
   width,
   val,
   onChange,
+  parentWidth,
 }) {
   return (
     <input
       onChange={onChange}
       value={val}
-      style={{ width: width }}
+      style={{ maxWidth: width, width: `${(width * 100) / parentWidth}%` }}
       placeholder={placeholder}
       className={classes.inp}
       onKeyDown={onKey}

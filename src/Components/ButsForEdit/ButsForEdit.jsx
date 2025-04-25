@@ -4,7 +4,8 @@ import SvgEdit from "../SVG-picture/SvgEdit/SvgEdit";
 import SvgForDel from "../SVG-picture/SvgDel/SvgForDel";
 
 export default function ButsForEdit({ setEditing, setArrLi, id }) {
-  function onClickEdit() {
+  function onClickEdit(event) {
+    event.preventDefault();
     setEditing((prev) => !prev);
   }
 

@@ -6,6 +6,11 @@
   height: 289px;
   border-radius: 15px;
   border: 1px solid var(--li-color);
+  @media (max-width: 600px) {
+    & {
+      width: 80vw;
+    }
+  }
 }
 
 .noteDialog::backdrop {
@@ -25,12 +30,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 
 .divButs {
   display: flex;
   justify-content: space-between;
-  width: 440px;
+  width: 100%;
   height: 38px;
 }
 
@@ -79,8 +85,9 @@
   border-radius: 30px;
   border: none;
   position: sticky;
-  top: 670px;
-  margin-left: 57px;
+  top: 72vh;
+  margin-left: 3vw;
+  flex-shrink: 0;
   background-color: rgb(108, 99, 255);
   cursor: pointer;
   display: flex;
@@ -104,4 +111,13 @@
   color: var(--li-color);
   font-size: 24px;
   font-weight: 500;
+}
+
+@media (hover: none) {
+  .cancel:hover {
+    background-color: var(--all-color);
+  }
+  .apply:hover {
+    background-color: rgb(108, 99, 255);
+  }
 }

@@ -5,6 +5,5 @@
 .content {
   width: 100%;
   display: flex;
-  min-height: 545px;
   justify-content: end;
 }

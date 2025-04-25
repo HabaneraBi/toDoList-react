@@ -12,3 +12,9 @@
     transition: stroke 0s;
   }
 }
+
+@media (hover: none) {
+  .svg:hover .path {
+    stroke: rgb(210, 210, 210);
+  }
+}
