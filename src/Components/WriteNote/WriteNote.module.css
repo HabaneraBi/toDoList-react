@@ -1,5 +1,7 @@
 @import "../../themeVar.module.css";
 .noteDialog {
+  position: absolute;
+  top: 30vh;
   background-color: var(--all-color);
   bottom: 400px;
   width: 500px;
