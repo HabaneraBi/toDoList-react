@@ -4,3 +4,9 @@
   list-style-type: none;
   padding: 0;
 }
+
+@media (max-width: 600px) {
+  .ul {
+    width: 100%;
+  }
+}

@@ -123,3 +123,21 @@
     background-color: rgb(108, 99, 255);
   }
 }
+
+@media (max-width: 600px) {
+  .but {
+    width: 8vw;
+    height: 8vw;
+    position: fixed;
+    top: 90vh;
+    left: 86%;
+  }
+}
+
+@media (max-width: 400px) {
+  .but {
+    width: 32px;
+    height: 32px;
+    left: 85%;
+  }
+}
