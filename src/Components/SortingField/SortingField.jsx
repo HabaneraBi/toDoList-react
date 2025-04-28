@@ -1,8 +1,8 @@
-import Input from "../Input/Input.jsx";
+import { Input } from "../Input/Input.jsx";
 import classes from "./SortingField.module.css";
 import DarkIconBut from "../../shared/icons/darkIconBut.svg?react";
 import LightIconBut from "../../shared/icons/lightIconBut.svg?react";
-import FilterDropdown from "../FilterDropdown/FilterDropdown.jsx";
+import { FilterDropdown } from "../FilterDropdown/FilterDropdown.jsx";
 import { useContext, useEffect } from "react";
 import { GlobalContext } from "../../Page/ToDoList.jsx";
 
@@ -24,7 +24,7 @@ const darkTheme = {
   "--span-color": "#979797",
 };
 
-export default function SortingField() {
+export function SortingField() {
   const context = useContext(GlobalContext);
 
   function onChangeSearch(e) {

@@ -1,11 +1,10 @@
-import SortingAndHeadingField from "../Components/SortingAndHeadingField/SortingAndHeadingField.jsx";
-import TasksWithForm from "../Components/TasksWithForm/TasksWithForm.jsx";
+import { SortingAndHeadingField } from "../Components/SortingAndHeadingField/SortingAndHeadingField.jsx";
+import { TasksWithForm } from "../Components/TasksWithForm/TasksWithForm.jsx";
 import { useState, createContext } from "react";
 
 const GlobalContext = createContext();
-export { GlobalContext };
 
-export default function ToDoList() {
+function ToDoList() {
   // from App
   const [searchVal, setSearchVal] = useState("");
   const [selectVal, setSelectVal] = useState("all");
@@ -32,3 +31,5 @@ export default function ToDoList() {
     </GlobalContext.Provider>
   );
 }
+
+export { GlobalContext, ToDoList };

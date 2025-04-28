@@ -1,10 +1,10 @@
 import classes from "./TaskList.module.css";
-import TaskItem from "../TaskItem/TaskItem.jsx";
+import { TaskItem } from "../TaskItem/TaskItem.jsx";
 import { GlobalContext } from "../../../Page/ToDoList.jsx";
 import { useContext } from "react";
-import EmptyContent from "../../EmptyContent/EmptyContent.jsx";
+import { EmptyContent } from "../../EmptyContent/EmptyContent.jsx";
 
-export default function TaskList({ arrLi, setArrLi }) {
+export function TaskList({ arrLi, setArrLi }) {
   const context = useContext(GlobalContext);
 
   const forMap = (el) => {

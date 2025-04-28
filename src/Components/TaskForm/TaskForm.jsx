@@ -1,11 +1,11 @@
-import Input from "../Input/Input";
+import { Input } from "../Input/Input";
 import classes from "./TaskForm.module.css";
 import SvgCreate from "../../shared/icons/createNewToDo.svg?react";
 import { useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { v4 as id } from "uuid";
 
-export default function TaskForm({ setArrLi }) {
+export function TaskForm({ setArrLi }) {
   const [inpVal, setInpVal] = useState("");
   const dialog = useRef(null);
   function closer() {

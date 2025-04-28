@@ -1,6 +1,6 @@
 import classes from "./Input.module.css";
 
-export default function Input({
+export function Input({
   onKey,
   placeholder,
   width,

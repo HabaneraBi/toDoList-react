@@ -1,11 +1,11 @@
 import { useEffect } from "react";
-import TaskForm from "../TaskForm/TaskForm.jsx";
+import { TaskForm } from "../TaskForm/TaskForm.jsx";
 import classes from "./TasksWithForm.module.css";
-import TaskList from "./TaskList/TaskList.jsx";
+import { TaskList } from "./TaskList/TaskList.jsx";
 import { GlobalContext } from "../../Page/ToDoList.jsx";
 import { useContext } from "react";
 
-export default function TasksWithForm() {
+export function TasksWithForm() {
   const context = useContext(GlobalContext);
 
   useEffect(() => {

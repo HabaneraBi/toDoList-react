@@ -1,11 +1,10 @@
 import classes from "./TaskItem.module.css";
-import ButsForEditingListItem from "../../ButsForEditingListItem/ButsForEditingListItem.jsx";
+import { ButsForEditingListItem } from "../../ButsForEditingListItem/ButsForEditingListItem.jsx";
 import { useState, useRef, useEffect, createContext } from "react";
 
 const ContextEdit = createContext();
-export { ContextEdit };
 
-export default function TaskItem({ text, setArrLi, id, isChecked }) {
+function TaskItem({ text, setArrLi, id, isChecked }) {
   const [editing, setEditing] = useState(false);
   const inp = useRef(null);
 
@@ -82,3 +81,5 @@ export default function TaskItem({ text, setArrLi, id, isChecked }) {
     </li>
   );
 }
+
+export { ContextEdit, TaskItem };
