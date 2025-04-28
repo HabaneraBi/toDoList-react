@@ -1,0 +1,21 @@
+.svg,
+.svgActive {
+  fill: var(--all-color);
+}
+
+.svg:hover path {
+  stroke: rgb(108, 99, 255);
+  transition: stroke 0.4s ease;
+}
+.svgActive path {
+  stroke: rgb(74, 70, 145);
+}
+.svg path {
+  stroke: rgb(210, 210, 210);
+}
+
+@media (hover: none) {
+  .svg:hover path {
+    stroke: rgb(210, 210, 210);
+  }
+}

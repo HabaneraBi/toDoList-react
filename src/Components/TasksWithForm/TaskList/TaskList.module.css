@@ -1,0 +1,15 @@
+.ul {
+  margin-top: 30px;
+  width: 70%;
+  min-height: 545px;
+  list-style-type: none;
+  padding: 0;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+@media (max-width: 600px) {
+  .ul {
+    width: 100%;
+  }
+}

@@ -1,0 +1,83 @@
+@import "../../../themeVar.module.css";
+.li {
+  margin-bottom: 20px;
+  box-sizing: content-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 5%;
+  width: 100%;
+  min-height: 26px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgb(108, 99, 255);
+}
+
+.checkbox {
+  flex-shrink: 0;
+  appearance: none;
+  outline: none;
+  transition: none;
+  border: 1px solid rgb(108, 99, 255);
+  width: 26px;
+  aspect-ratio: 1;
+  cursor: pointer;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  &:not(:checked):hover {
+    background-color: var(--active-checkbox);
+    transition: background-color 0.3s ease;
+  }
+  &:checked::before {
+    content: url("../../../shared/icons/checked.svg");
+    font-size: 20px;
+    color: white;
+  }
+}
+
+.checkbox:checked {
+  width: 26px;
+  height: 26px;
+  background-color: rgb(108, 99, 255);
+}
+
+.checkbox:checked:hover {
+  background-color: rgb(131, 125, 255);
+  border: 1px solid rgb(131, 125, 255);
+}
+
+.textSpan {
+  width: 75%;
+  min-height: 26px;
+  font-size: 23px;
+  display: flex;
+  align-items: center;
+  word-break: break-word;
+  color: var(--li-color);
+}
+
+.fieldEdit {
+  padding: 0;
+  width: 75%;
+  height: 34px;
+  font-size: 23px;
+  border: 1px solid rgb(108, 99, 255);
+  border-radius: 7px;
+  &:focus {
+    outline: none;
+  }
+}
+
+.textSpanChecked {
+  color: var(--span-color);
+  opacity: 50%;
+  text-decoration: line-through;
+}
+
+@media (hover: none) {
+  .checkbox:not(:checked):hover {
+    background-color: var(--all-color);
+  }
+}
