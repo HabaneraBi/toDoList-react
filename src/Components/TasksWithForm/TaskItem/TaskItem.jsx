@@ -5,7 +5,6 @@ import { useState, useRef, useEffect, createContext } from "react";
 const ContextEdit = createContext();
 
 function TaskItem({ text, setArrLi, id, isChecked }) {
-  console.log("li");
   const [editing, setEditing] = useState(false);
   const [inpVal, setInpVal] = useState(text);
   const inp = useRef(null);
@@ -23,15 +22,6 @@ function TaskItem({ text, setArrLi, id, isChecked }) {
 
   function changeText(e) {
     setInpVal(e.target.value);
-    // setArrLi((prev) => {
-    //   const newArr = prev.map((el) => {
-    //     if (el.id === id) {
-    //       return { ...el, val: e.target.value };
-    //     }
-    //     return el;
-    //   });
-    //   return newArr;
-    // });
   }
 
   function changeChecked() {
