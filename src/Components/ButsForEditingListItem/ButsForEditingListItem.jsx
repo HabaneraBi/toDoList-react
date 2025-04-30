@@ -7,11 +7,20 @@ import Pencil from "../../shared/icons/pencil.svg?react";
 import { ContextEdit } from "../TasksWithForm/TaskItem/TaskItem.jsx";
 import { useContext } from "react";
 
-export function ButsForEditingListItem({ setEditing, setArrLi, id }) {
+export function ButsForEditingListItem({ setEditing, setArrLi, id, inpVal }) {
   const edit = useContext(ContextEdit);
   function onClickEdit(event) {
     event.preventDefault();
     setEditing((prev) => !prev);
+    setArrLi((prev) => {
+      const newArr = prev.map((el) => {
+        if (el.id === id) {
+          return { ...el, val: inpVal };
+        }
+        return el;
+      });
+      return newArr;
+    });
   }
 
   function onClickDel() {

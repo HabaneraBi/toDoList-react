@@ -6,7 +6,7 @@ import { EmptyContent } from "../../EmptyContent/EmptyContent.jsx";
 
 export function TaskList({ arrLi, setArrLi }) {
   const context = useContext(GlobalContext);
-
+  console.log("ul");
   const forMap = (el) => {
     return (
       <TaskItem
