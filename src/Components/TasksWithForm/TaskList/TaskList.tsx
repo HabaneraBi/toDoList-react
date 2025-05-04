@@ -1,16 +1,21 @@
 import classes from "./TaskList.module.css";
-import { TaskItem } from "../TaskItem/TaskItem.jsx";
-import { GlobalContext } from "../../../Page/ToDoList.jsx";
-import { useContext } from "react";
-import { EmptyContent } from "../../EmptyContent/EmptyContent.jsx";
+import { TaskItem } from "../TaskItem/TaskItem";
+import { GlobalContext } from "../../../Page/ToDoList";
+import { useContext, FC } from "react";
+import { EmptyContent } from "../../EmptyContent/EmptyContent";
+import { TypeArrLi, TypeLi, TypeSetArrLi } from "../../../Page/types";
 
-export function TaskList({ arrLi, setArrLi }) {
+interface TaskListProps {
+  arrLi: TypeArrLi;
+  setArrLi: TypeSetArrLi;
+}
+
+const TaskList: FC<TaskListProps> = ({ arrLi, setArrLi }) => {
   const context = useContext(GlobalContext);
-  const forMap = (el) => {
+  const forMap = (el: TypeLi) => {
     return (
       <TaskItem
         isChecked={el.isChecked}
-        arrLi={arrLi}
         id={el.id}
         setArrLi={setArrLi}
         key={el.id}
@@ -49,4 +54,6 @@ export function TaskList({ arrLi, setArrLi }) {
       )}
     </>
   );
-}
+};
+
+export { TaskList };

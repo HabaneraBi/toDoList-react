@@ -1,13 +1,28 @@
+import {
+  FC,
+  ChangeEvent,
+  KeyboardEventHandler,
+  ChangeEventHandler,
+} from "react";
 import classes from "./Input.module.css";
 
-export function Input({
+interface InputProps {
+  onKey?: KeyboardEventHandler;
+  placeholder: string;
+  width: number;
+  val?: string;
+  onChange: ChangeEventHandler;
+  parentWidth: number;
+}
+
+const Input: FC<InputProps> = ({
   onKey,
   placeholder,
   width,
   val,
   onChange,
   parentWidth,
-}) {
+}) => {
   return (
     <input
       onChange={onChange}
@@ -19,4 +34,6 @@ export function Input({
       type="text"
     />
   );
-}
+};
+
+export { Input };

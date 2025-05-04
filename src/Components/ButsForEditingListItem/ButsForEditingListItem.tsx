@@ -1,15 +1,28 @@
 import classesDivBut from "./ButsForEditingListItem.module.css";
 import classesPencil from "./StylesForSvgIconsButton/Pencil.module.css";
 import classesTrash from "./StylesForSvgIconsButton/Trash.module.css";
-import { Button } from "../Button/Button.jsx";
+import { Button } from "../Button/Button";
 import Trash from "../../shared/icons/trash.svg?react";
 import Pencil from "../../shared/icons/pencil.svg?react";
-import { ContextEdit } from "../TasksWithForm/TaskItem/TaskItem.jsx";
-import { useContext } from "react";
+import { ContextEdit } from "../TasksWithForm/TaskItem/TaskItem";
+import { FC, useContext } from "react";
+import { TypeSetArrLi } from "../../Page/types";
 
-export function ButsForEditingListItem({ setEditing, setArrLi, id, inpVal }) {
+interface ButsForEditingListItemProps {
+  setEditing: React.Dispatch<React.SetStateAction<boolean>>;
+  setArrLi: TypeSetArrLi;
+  id: string;
+  inpVal: string;
+}
+
+const ButsForEditingListItem: FC<ButsForEditingListItemProps> = ({
+  setEditing,
+  setArrLi,
+  id,
+  inpVal,
+}) => {
   const edit = useContext(ContextEdit);
-  function onClickEdit(event) {
+  function onClickEdit(event: React.MouseEvent<HTMLButtonElement>) {
     event.preventDefault();
     setEditing((prev) => !prev);
     setArrLi((prev) => {
@@ -39,4 +52,6 @@ export function ButsForEditingListItem({ setEditing, setArrLi, id, inpVal }) {
       </Button>
     </div>
   );
-}
+};
+
+export { ButsForEditingListItem };

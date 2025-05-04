@@ -1,12 +1,22 @@
-import { Input } from "../Input/Input.jsx";
+import { Input } from "../Input/Input";
 import classes from "./SortingField.module.css";
 import DarkIconBut from "../../shared/icons/darkIconBut.svg?react";
 import LightIconBut from "../../shared/icons/lightIconBut.svg?react";
-import { FilterDropdown } from "../FilterDropdown/FilterDropdown.jsx";
-import { useContext, useEffect } from "react";
-import { GlobalContext } from "../../Page/ToDoList.jsx";
+import { FilterDropdown } from "../FilterDropdown/FilterDropdown";
+import { ChangeEvent, ChangeEventHandler, useContext, useEffect } from "react";
+import { GlobalContext } from "../../Page/ToDoList";
+import { SelectVal } from "../../Page/types";
 
-const lightTheme = {
+interface Themes {
+  "--input-color": string;
+  "--all-color": string;
+  "--li-color": string;
+  "--placeholder-color": string;
+  "--active-checkbox": string;
+  "--span-color": string;
+}
+
+const lightTheme: Themes = {
   "--input-color": "rgb(108, 99, 255)",
   "--all-color": "rgb(247, 247, 247)",
   "--li-color": "black",
@@ -15,7 +25,7 @@ const lightTheme = {
   "--span-color": "#252525",
 };
 
-const darkTheme = {
+const darkTheme: Themes = {
   "--input-color": "rgb(247, 247, 247)",
   "--all-color": "rgb(37,37,37)",
   "--li-color": "rgb(247, 247, 247)",
@@ -27,12 +37,12 @@ const darkTheme = {
 export function SortingField() {
   const context = useContext(GlobalContext);
 
-  function onChangeSearch(e) {
+  const onChangeSearch: ChangeEventHandler<HTMLInputElement> = (e) => {
     context.setSearchVal(e.target.value);
-  }
+  };
 
-  function onChangeSelect(e) {
-    context.setSelectVal(e.target.value);
+  function onChangeSelect(e: ChangeEvent<HTMLSelectElement>) {
+    context.setSelectVal(e.target.value as SelectVal);
   }
 
   function onClickTheme() {
@@ -42,11 +52,17 @@ export function SortingField() {
   useEffect(() => {
     if (context.theme) {
       for (const el in darkTheme) {
-        document.documentElement.style.setProperty(el, darkTheme[el]);
+        document.documentElement.style.setProperty(
+          el,
+          darkTheme[el as keyof Themes]
+        );
       }
     } else {
       for (const el in lightTheme) {
-        document.documentElement.style.setProperty(el, lightTheme[el]);
+        document.documentElement.style.setProperty(
+          el,
+          lightTheme[el as keyof Themes]
+        );
       }
     }
   });
