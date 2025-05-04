@@ -1,8 +1,8 @@
 import { useEffect } from "react";
-import { TaskForm } from "../TaskForm/TaskForm.jsx";
+import { TaskForm } from "../TaskForm/TaskForm.js";
 import classes from "./TasksWithForm.module.css";
-import { TaskList } from "./TaskList/TaskList.jsx";
-import { GlobalContext } from "../../Page/ToDoList.jsx";
+import { TaskList } from "./TaskList/TaskList.js";
+import { GlobalContext } from "../../Page/ToDoList.js";
 import { useContext } from "react";
 
 export function TasksWithForm() {
@@ -10,7 +10,7 @@ export function TasksWithForm() {
 
   useEffect(() => {
     if (localStorage.getItem("info")) {
-      context.setArrLi(JSON.parse(localStorage.getItem("info")));
+      context.setArrLi(JSON.parse(localStorage.getItem("info")!));
     }
   }, []);
 

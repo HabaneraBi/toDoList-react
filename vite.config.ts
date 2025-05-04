@@ -8,6 +8,7 @@ export default defineConfig({
   plugins: [
     react(),
     svgr({
+      include: "**/*.svg?react",
       svgrOptions: {
         svgo: true,
         prettier: true,

@@ -1,26 +1,52 @@
 import classes from "./TaskItem.module.css";
-import { ButsForEditingListItem } from "../../ButsForEditingListItem/ButsForEditingListItem.jsx";
-import { useState, useRef, useEffect, createContext } from "react";
+import { ButsForEditingListItem } from "../../ButsForEditingListItem/ButsForEditingListItem.js";
+import {
+  useState,
+  useRef,
+  useEffect,
+  createContext,
+  FC,
+  ChangeEvent,
+  KeyboardEvent,
+} from "react";
+import { TypeSetArrLi } from "../../../Page/types.js";
 
-const ContextEdit = createContext();
+interface TaskItemProps {
+  text: string;
+  setArrLi: TypeSetArrLi;
+  id: string;
+  isChecked: boolean;
+}
 
-function TaskItem({ text, setArrLi, id, isChecked }) {
+const ContextEdit = createContext<boolean>(false);
+
+const TaskItem: FC<TaskItemProps> = ({ text, setArrLi, id, isChecked }) => {
   const [editing, setEditing] = useState(false);
   const [inpVal, setInpVal] = useState(text);
-  const inp = useRef(null);
+  const inp = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     inp.current?.focus();
     inp.current?.select();
+    console.log(editing, "from TaskItem");
   }, [editing]);
 
-  function handleEnter(e) {
+  function handleEnter(e: KeyboardEvent<HTMLInputElement>) {
     if (e.key === "Enter") {
       setEditing(false);
+      setArrLi((prev) => {
+        const newArr = prev.map((el) => {
+          if (el.id === id) {
+            return { ...el, val: inpVal };
+          }
+          return el;
+        });
+        return newArr;
+      });
     }
   }
 
-  function changeText(e) {
+  function changeText(e: ChangeEvent<HTMLInputElement>) {
     setInpVal(e.target.value);
   }
 
@@ -74,6 +100,6 @@ function TaskItem({ text, setArrLi, id, isChecked }) {
       </ContextEdit.Provider>
     </li>
   );
-}
+};
 
 export { ContextEdit, TaskItem };
