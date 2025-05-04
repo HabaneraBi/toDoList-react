@@ -65,6 +65,8 @@
   font-size: 23px;
   border: 1px solid rgb(108, 99, 255);
   border-radius: 7px;
+  color: var(--li-color);
+  background-color: var(--all-color);
   &:focus {
     outline: none;
   }

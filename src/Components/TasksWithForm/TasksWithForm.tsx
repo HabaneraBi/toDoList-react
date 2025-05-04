@@ -1,8 +1,8 @@
 import { useEffect } from "react";
-import { TaskForm } from "../TaskForm/TaskForm.js";
+import { TaskForm } from "../TaskForm/TaskForm";
 import classes from "./TasksWithForm.module.css";
-import { TaskList } from "./TaskList/TaskList.js";
-import { GlobalContext } from "../../Page/ToDoList.js";
+import { TaskList } from "./TaskList/TaskList";
+import { GlobalContext } from "../../Page/ToDoList";
 import { useContext } from "react";
 
 export function TasksWithForm() {

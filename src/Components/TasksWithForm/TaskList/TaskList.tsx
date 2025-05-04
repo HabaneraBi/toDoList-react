@@ -1,9 +1,9 @@
 import classes from "./TaskList.module.css";
-import { TaskItem } from "../TaskItem/TaskItem.js";
-import { GlobalContext } from "../../../Page/ToDoList.js";
+import { TaskItem } from "../TaskItem/TaskItem";
+import { GlobalContext } from "../../../Page/ToDoList";
 import { useContext, FC } from "react";
-import { EmptyContent } from "../../EmptyContent/EmptyContent.js";
-import { TypeArrLi, TypeLi, TypeSetArrLi } from "../../../Page/types.js";
+import { EmptyContent } from "../../EmptyContent/EmptyContent";
+import { TypeArrLi, TypeLi, TypeSetArrLi } from "../../../Page/types";
 
 interface TaskListProps {
   arrLi: TypeArrLi;

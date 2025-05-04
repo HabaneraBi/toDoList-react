@@ -1,11 +1,11 @@
-import { Input } from "../Input/Input.js";
+import { Input } from "../Input/Input";
 import classes from "./SortingField.module.css";
 import DarkIconBut from "../../shared/icons/darkIconBut.svg?react";
 import LightIconBut from "../../shared/icons/lightIconBut.svg?react";
-import { FilterDropdown } from "../FilterDropdown/FilterDropdown.js";
-import { ChangeEvent, useContext, useEffect } from "react";
-import { GlobalContext } from "../../Page/ToDoList.js";
-import { SelectVal } from "../../Page/types.js";
+import { FilterDropdown } from "../FilterDropdown/FilterDropdown";
+import { ChangeEvent, ChangeEventHandler, useContext, useEffect } from "react";
+import { GlobalContext } from "../../Page/ToDoList";
+import { SelectVal } from "../../Page/types";
 
 interface Themes {
   "--input-color": string;
@@ -37,9 +37,9 @@ const darkTheme: Themes = {
 export function SortingField() {
   const context = useContext(GlobalContext);
 
-  function onChangeSearch(e: ChangeEvent<HTMLInputElement>) {
+  const onChangeSearch: ChangeEventHandler<HTMLInputElement> = (e) => {
     context.setSearchVal(e.target.value);
-  }
+  };
 
   function onChangeSelect(e: ChangeEvent<HTMLSelectElement>) {
     context.setSelectVal(e.target.value as SelectVal);

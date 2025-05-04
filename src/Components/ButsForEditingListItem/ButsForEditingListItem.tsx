@@ -1,12 +1,12 @@
 import classesDivBut from "./ButsForEditingListItem.module.css";
 import classesPencil from "./StylesForSvgIconsButton/Pencil.module.css";
 import classesTrash from "./StylesForSvgIconsButton/Trash.module.css";
-import { Button } from "../Button/Button.js";
+import { Button } from "../Button/Button";
 import Trash from "../../shared/icons/trash.svg?react";
 import Pencil from "../../shared/icons/pencil.svg?react";
-import { ContextEdit } from "../TasksWithForm/TaskItem/TaskItem.js";
+import { ContextEdit } from "../TasksWithForm/TaskItem/TaskItem";
 import { FC, useContext } from "react";
-import { TypeSetArrLi } from "../../Page/types.js";
+import { TypeSetArrLi } from "../../Page/types";
 
 interface ButsForEditingListItemProps {
   setEditing: React.Dispatch<React.SetStateAction<boolean>>;

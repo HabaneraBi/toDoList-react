@@ -1,12 +1,17 @@
-import { FC, ChangeEvent } from "react";
+import {
+  FC,
+  ChangeEvent,
+  KeyboardEventHandler,
+  ChangeEventHandler,
+} from "react";
 import classes from "./Input.module.css";
 
 interface InputProps {
-  onKey?<Key>(e: Key): void;
+  onKey?: KeyboardEventHandler;
   placeholder: string;
   width: number;
   val?: string;
-  onChange(e: ChangeEvent<HTMLInputElement>): void;
+  onChange: ChangeEventHandler;
   parentWidth: number;
 }
 

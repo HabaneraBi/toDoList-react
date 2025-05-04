@@ -1,5 +1,5 @@
 import classes from "./TaskItem.module.css";
-import { ButsForEditingListItem } from "../../ButsForEditingListItem/ButsForEditingListItem.js";
+import { ButsForEditingListItem } from "../../ButsForEditingListItem/ButsForEditingListItem";
 import {
   useState,
   useRef,
